@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="food-menu-style.css">
+    <script src = "../main.js">
+    </script>
+
+</head>
+<body>
+    <!--heading-->
+    <header class = "heading">FOOD MENU</header>
+    <!--grid layout-->
+    <div class="head-grid">
+        <p class="head-left">Timing</p>
+        <p class="head-center">Menu</p>
+        
+    </div>
+    <div class="grid">
+        <!--left layout-->
+        <div class="left">
+            <button class="time morning" value="food" id = "morning" onclick = "visible_morning(event)">Breakfast</button><br>
+            <button class="time afternoon" value = "food" id = "afternoon"onclick = "visible_lunch(event)">Lunch</button>
+            <button class="time snack"value = "food" id = "snack"onclick = "visible_snacks(event)">Snacks</button>
+            <a href="../home/index.html"><button class="time back"onclick = "back(event)">Back</button></a>
+            
+        </div>
+        <!--center layout-->
+        <div class="center">
+                <ul class="breakfast" id = "breakfast">
+                    <!--idly-->
+                    <li class=" frames idly">
+                        <button class  = "frames frames-button" id = "idly"value = "Idly"onclick = "add(event,'Idly')">
+                            <img src="../images/idly.jpg" alt="Idly" class="img-food img-idly">
+                            <ol class="main-details idly-details">
+                                <li class="name idlylist-name">
+                                    <label>Item : </label>
+                                    <label>Idly</label>
+                                </li>
+                                <li class="quantity idlylist-quantity">
+                                    <label>Quantity : </label>
+                                    <label>3</label>
+                                </li>
+                                <li class="price idlylist-price">
+                                    <label>Price : </label>
+                                    <label>Rs 20</label>
+                                </li>
+                            </ol>
+                        </button>
+                    </li>
+                    <!--poori-->
+                    <li class="frames poori">
+                        <button class="frames frames-button" value = "Poori"onclick = "add(event,'Poori')">
+                        <img src="../images/poori.jpg" alt="Idly" class="img-food img-poori">
+                        <ol class="main-details poori-details">
+                            <li class="name poorilist-name">
+                                <label>Item : </label>
+                                <label>Poori</label>
+                            </li>
+                            <li class="quantity poorilist-quantity">
+                                <label>Quantity : </label>
+                                <label>1</label>
+                            </li>
+                            <li class="price poorilist-price">
+                                <label>Price : </label>
+                                <label>Rs 15</label>
+                            </li>
+                            </button>
+                        </ol>
+                        
+                    </li>
+                    <!--dosa-->
+                    <li class="frames dosa">
+                        <button class="frames frames-button" value = "Dosa"onclick = "add(event,'Dosa')">
+                        <img src="../images/doas.jpg" alt="Idly" class="img-food img-dosa">
+                        <ol class="main-details dosa-details">
+                            <li class="name dosalist-name">
+                                <label>Item : </label>
+                                <label>Dosa</label>
+                            </li>
+                            <li class="quantity dosalist-quantity">
+                                <label>Quantity : </label>
+                                <label>1</label>
+                            </li>
+                            <li class="price dosalist-price">
+                                <label>Price : </label>
+                                <label>Rs 15</label>
+                            </li>
+                        </ol>
+                        </button>
+                        
+                    </li>
+                    <!--pongal-->
+                    <li class="frames pongal">
+                        <button class="frames frames-button" value="Pongal"onclick = "add(event,'Pongal')">
+                        <img src="../images/pongal.jpg" alt="Idly" class="img-food img-pongal">
+                        <ol class="main-details pongal-details">
+                            <li class="name pongallist-name">
+                                <label>Item : </label>
+                                <label>Pongal</label>
+                            </li>
+                            <li class="quantity pongallist-quantity">
+                                <label>Quantity : </label>
+                                <label>1</label>
+                            </li>
+                            <li class="price pongallist-price">
+                                <label>Price : </label>
+                                <label>Rs 30</label>
+                            </li>
+                        </ol>
+                        </button>
+                    </li>
+                </ul>
+                <ul class="lunch"id = "lunch">
+                    <!--parotta-->
+                    <li class=" frames parotta">
+                        <button class="frames frames-button" value="Parotta"onclick = "add(event,'Parotta')">
+                        <img src="../images/parotta.jpg" alt="parotta" class="img-food img-parotta">
+                        <ol class="main-details parotta-details">
+                            <li class="name parottalist-name">
+                                <label>Item : </label>
+                                <label>parotta</label>
+                            </li>
+                            <li class="quantity parottalist-quantity">
+                                <label>Quantity : </label>
+                                <label>1</label>
+                            </li>
+                            <li class="price parottalist-price">
+                                <label>Price : </label>
+                                <label>Rs 15</label>
+                            </li>
+                        </ol>
+                        </button>
+                    </li>
+                    <!--meals-->
+                    <li class="frames meals">
+                        <button class="frames frames-button" value="Meals"onclick = "add(event,'Meals')">
+                        <img src="../images/meals.jpg" alt="meals" class="img-food img-meals">
+                        <ol class="main-details meals-details">
+                            <li class="name mealslist-name">
+                                <label>Item : </label>
+                                <label>meals</label>
+                            </li>
+                            <li class="quantity mealslist-quantity">
+                                <label>Quantity : </label>
+                                <label>1</label>
+                            </li>
+                            <li class="price mealslist-price">
+                                <label>Price : </label>
+                                <label>Rs 50</label>
+                            </li>
+                        </ol>
+                        </button>
+                    </li>
+                    <!--dosa-->
+                    <li class="frames tomato-rice">
+                        <button class="frames frames-button" value="Tomato Rice"onclick = "add(event,'Tomato Rice')">
+                        <img src="../images/tomato-rice.jpg" alt="tomato-rice" class="img-food img-tomato-rice">
+                        <ol class="main-details tomato-rice-details">
+                            <li class="name tomato-ricelist-name">
+                                <label>Item : </label>
+                                <label>Tomato rice</label>
+                            </li>
+                            <li class="quantity tomato-ricelist-quantity">
+                                <label>Quantity : </label>
+                                <label>1</label>
+                            </li>
+                            <li class="price tomato-ricelist-price">
+                                <label>Price : </label>
+                                <label>Rs 30</label>
+                            </li>
+                        </ol>
+                        </button>
+                    </li>
+                    <!--pongal-->
+                    <li class="frames veg-biriyani">
+                        <button class="frames frames-button" value="Veg Biriyani"onclick = "add(event,'Veg Biriyani')">
+                        <img src="../images/veg-biriyani.jpg" alt="veg-biriyani" class="img-food img-veg-biriyani">
+                        <ol class="main-details veg-biriyani-details">
+                            <li class="name veg-biriyanilist-name">
+                                <label>Item : </label>
+                                <label>Veg biriyani</label>
+                            </li>
+                            <li class="quantity veg-biriyanilist-quantity">
+                                <label>Quantity : </label>
+                                <label>1</label>
+                            </li>
+                            <li class="price veg-biriyanilist-price">
+                                <label>Price : </label>
+                                <label>Rs 50</label>
+                            </li>
+                        </ol>
+                        </button>
+                    </li>
+                </ul>
+                <ul class="snacks"id = "snacks">
+                    <!--tea-->
+                    <li class="frames tea">
+                        <button class="frames frames-button" value="Tea"onclick = "add(event,'Tea')">
+                        <img src="../images/tea.jpg" alt="Tea" class="img-food img-veg-biriyani">
+                        <ol class="main-details Tea-details">
+                            <li class="name tealist-name">
+                                <label>Item : </label>
+                                <label>Tea</label>
+                            </li>
+                            <li class="quantity tealist-quantity">
+                                <label>Quantity : </label>
+                                <label>1</label>
+                            </li>
+                            <li class="price tealist-price">
+                                <label>Price : </label>
+                                <label>Rs 10</label>
+                            </li>
+                        </ol>
+                        </button>
+                    </li>
+                    <!--Coffee-->
+                    <li class="frames coffee">
+                        <button class="frames frames-button" value="coffee"onclick = "add(event,'Coffee')">
+                        <img src="../images/coffee.jpg" alt="coffee" class="img-food img-veg-biriyani">
+                        <ol class="main-details coffee-details">
+                            <li class="name coffeelist-name">
+                                <label>Item : </label>
+                                <label>Coffee</label>
+                            </li>
+                            <li class="quantity coffeelist-quantity">
+                                <label>Quantity : </label>
+                                <label>1</label>
+                            </li>
+                            <li class="price coffeelist-price">
+                                <label>Price : </label>
+                                <label>Rs 10</label>
+                            </li>
+                        </ol>
+                        </button>
+                    </li>
+                    <!--Samosa-->
+                    <li class="frames Samosa">
+                        <button class="frames frames-button" value="Samosa"onclick = "add(event,'Samosa')">
+                        <img src="../images/samosa.jpeg" alt="samosa" class="img-food img-veg-biriyani">
+                        <ol class="main-details samosa-details">
+                            <li class="name samosalist-name">
+                                <label>Item : </label>
+                                <label>Samosa</label>
+                            </li>
+                            <li class="quantity samosalist-quantity">
+                                <label>Quantity : </label>
+                                <label>1</label>
+                            </li>
+                            <li class="price samosalist-price">
+                                <label>Price : </label>
+                                <label>Rs 10</label>
+                            </li>
+                        </ol>
+                        </button>
+                    </li>
+                </ul>
+        </div>  
+        <!--right layout-->
+        <div class="right">
+            <div class="full">
+            <image>
+            <!--details-->
+            <div>
+            <center><img src="../images/dummy.webp" alt="picture" width="200" height="200"></center>
+            </div>
+            </image>
+            <br>
+            <div class="details">
+            <div>
+            <p>NAME: <span>NAME</span></p>
+            <br>
+            <p>ROLL NUMBER: <span>20BCS000</span></p>
+            <br>
+            <p>BALANCE AMOUNT: <span>1500</span></p>
+            </div>
+            </div>
+            <br>
+            </div>
+            <div class="cart">
+                <div class="mainframe">
+                    <p class="head-cart">Your Cart</p>
+                    <hr>
+                    <form id = "cart-list"></form>
+                </div>
+                <footer>
+                    <button class="submit"id = "submit"onclick = "final_submit(event)">
+                        SUBMIT
+                    </button>
+                </footer>
+            </div>
+        </div>
+        </div>
+    </div>
+
+</body>
+</html>
